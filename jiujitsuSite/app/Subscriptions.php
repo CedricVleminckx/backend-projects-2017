@@ -15,4 +15,7 @@ class Subscriptions extends Model
   {
       return $this->hasMany('App\User');
   }
+
+  protected $fillable = ['users_id', 'events_id'];
+  public $timestamps = false;
 }

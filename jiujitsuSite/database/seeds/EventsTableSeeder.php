@@ -18,6 +18,7 @@ class EventsTableSeeder extends Seeder
             'price' => 'Gratis',
             'type' => 'Wedstrijd',
             'when' => date('01-07-2017'),
+            'who' => 'false',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
@@ -28,8 +29,9 @@ class EventsTableSeeder extends Seeder
             'price' => '€5',
             'type' => 'Stage',
             'when' => date('05-08-2017'),
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s')
+            'who' => 'true',
+            'created_at' => date('d-m-Y H:i:s'),
+            'updated_at' => date('d-m-Y H:i:s')
         ]);
 
     }

@@ -30,10 +30,14 @@
                 </td>
                 <td class="text-right">
 
-                <form class="delete" action="{{ url('/bewerken/delete')}}/{{$event->id}}" method="post">
-                  {{ csrf_field() }}
-                  <button type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-remove"></i>Delete</button>
-                </form>
+                  {!! Form::open(array('url' => 'bewerken/delete', 'method' => 'POST', 'class' => "delete")) !!}
+                  {{-- CSRF protection is included through collective --}}
+                  {{ Form::hidden('id', $event->id) }}
+
+                  {{-- {!! method_field('DELETE') !!} -- }}
+                  {{-- creates a hidden field to link to the DELETE method --}}
+                  <button type="submit" class="btn btn-danger btn-sm"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+                  {!! Form::close() !!}
                 </td>
               </tr>
             </tbody>
@@ -45,4 +49,5 @@
     </div><!-- /.container -->
   </section>
 </main>
+
 @endsection

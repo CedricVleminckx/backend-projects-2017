@@ -11,5 +11,5 @@ class Events extends Model
       return $this->hasMany('App\Subscriptions');
   }
 
-  protected $fillable = ['title', 'content'];
+  protected $fillable = ['eventName', 'content', 'location', 'price', 'type', 'when', 'who'];
 }

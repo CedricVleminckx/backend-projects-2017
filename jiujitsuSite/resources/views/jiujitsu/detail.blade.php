@@ -15,7 +15,7 @@
         <div class="col-sm-10">
           <header>
             <h1>{{$event->eventName}}</h1>
-            <p>{{$event->content}}</p>
+            <p>{!! $event->content !!}</p>
           </header>
         </div><!-- /.col -->
       </div><!-- ./row -->
@@ -34,44 +34,32 @@
           <div class="row">
 
             <div class="col-sm-6 outer-top-md inner-right-sm">
+              @if (Auth::guest())
+                {!! Form::open(['url' => ['/inschrijvingen/post', $event->id]]) !!}
+                {!! Form::token() !!}
 
-              <h2>Inschrijven</h2>
+                <h4>Naam</h4>
+                  {!! Form::text('name', '', ['class' => 'form-control']) !!}
+                <h4>Achternaam</h4>
+                  {!! Form::text('lastname', '', ['class' => 'form-control']) !!}
+                <h4>Leeftijd</h4>
+                  {!! Form::text('leeftijd', '', ['class' => 'form-control']) !!}
+                <h4>email</h4>
+                  {!! Form::text('email', '', ['class' => 'form-control']) !!}
+              @else
+                {!! Form::model($user, ['url' => ['/inschrijvingen/post', $event->id]]) !!}
+                <h4>Naam</h4>
+                  {!! Form::text('name') !!}
+                <h4>Achternaam</h4>
+                  {!! Form::text('lastname') !!}
+                <h4>Leeftijd</h4>
+                  {!! Form::text('leeftijd') !!}
+                <h4>email</h4>
+                  {!! Form::text('email') !!}
 
-              <form id="courseregistrationform" class="forms" action="/api/courses/1/registrations" method="post">
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <input type="hidden" name="id" value="1"/>
-                        <input type="text" name="lastname" class="form-control" placeholder="Naam (Verplicht)">
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-
-                <div class="row">
-                  <div class="col-sm-6">
-                    <input type="text" name="firstname" class="form-control" placeholder="Voornaam (Verplicht)">
-                  </div><!-- /.col -->
-                </div><!-- /.row -->
-
-                <div class="row">
-                  <div class="col-sm-6">
-                    <input type="text" name="age" class="form-control" placeholder="Leeftijd (Verplicht)">
-                  </div><!-- /.col -->
-                </div><!-- /.row -->
-
-                <div class="row">
-                  <div class="col-sm-6">
-                    <input type="email" name="email" class="form-control" placeholder="Email (Verplicht)">
-                  </div><!-- /.col -->
-                </div><!-- /.row -->
-
-                <button type="submit" class="btn btn-default btn-submit">Inschrijven</button>
-
-              </form>
-
-              <div id="response"></div>
-
-            </div><!-- ./col -->
-
+              @endif
+              <button type="submit" class="btn btn-default btn-submit">Inschrijven</button>
+            </div>
             <div class="col-sm-6 outer-top-md inner-left-sm border-left">
 
               <h2>Waar?</h2>

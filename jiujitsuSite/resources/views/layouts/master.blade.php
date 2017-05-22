@@ -113,6 +113,7 @@
                 @elseif(Auth::user()->name == 'Cedric')
                 <ul class="dropdown-menu">
                   <li><a href="{{url('/bewerken')}}">Bewerken</a></li>
+                  <li><a href="{{url('/inschrijvingen')}}">Inschrijvingen</a></li>
                 </ul><!-- /.dropdown-menu -->
                 @endif
               </li><!-- /.dropdown -->

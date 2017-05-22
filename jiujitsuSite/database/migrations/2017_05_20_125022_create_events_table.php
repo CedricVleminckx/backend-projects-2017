@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
           $table->string('price');
           $table->string('type');
           $table->date('when');
+          $table->boolean('who');
           $table->timestamps();
       });
     }

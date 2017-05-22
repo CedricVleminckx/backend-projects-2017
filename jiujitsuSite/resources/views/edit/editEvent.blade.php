@@ -10,24 +10,24 @@
 </head>
 <main>
   <section id="who-we-are">
-    <div class="container inner-right">
+    <div class="container inner-left">
       <div class="row">
         <div class="col-md-10">
           <body>
-          {!! Form::open(['url' => '/bewerken/add/post','method' => 'POST']) !!}
+          {!! Form::model($event, ['url' => ['/bewerken/post', $event->id]]) !!}
           {!! Form::token() !!}
           <h4>Title:</h4>
-            {!! Form::text('eventName', '', ['class' => 'form-control']) !!}
+            {!! Form::text('eventName') !!}
           <h4>Content:</h4>
-            {!! Form::textarea('content', '', ['class' => 'form-control']) !!}
+            {!! Form::textarea('content') !!}
           <h4>Datum:</h4>
-            {!! Form::date('when', '', ['class' => 'form-control']) !!}
+            {!! Form::date('when') !!}
           <h4>Locatie:</h4>
-            {!! Form::text('location', '', ['class' => 'form-control']) !!}
+            {!! Form::text('location') !!}
           <h4>Prijs</h4>
-            {!! Form::text('price', '', ['class' => 'form-control']) !!}
+            {!! Form::text('price') !!}
           <h4>Type:</h4>
-            {!! Form::text ('type', '', ['class' => 'form-control']) !!}
+            {!! Form::text('type') !!}
           <h4>Voor iedereen?</h4>
             {!! Form::select('who', ['true' => 'true', 'false' => 'false']  ) !!}<br>
           </body>
