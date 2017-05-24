@@ -70,7 +70,7 @@ class AdminController extends Controller
   {
     $subs = Subscriptions::join('users', 'users.id','=', 'users_id')
         ->join('events', 'events.id','=', 'events_id')
-        ->select('Eventname', 'name', 'lastname', 'email', 'leeftijd', 'events_id')
+        ->select('Eventname', 'name', 'lastname', 'email', 'leeftijd', 'events_id', 'member')
         ->orderby('events_id', 'ASC')
         ->get();
     return view('admin.subs', ['subs' => $subs]);

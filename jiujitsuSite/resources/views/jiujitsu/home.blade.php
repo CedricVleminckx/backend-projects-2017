@@ -11,36 +11,35 @@
 
   <section id="hero">
     <div id="owl-main" class="owl-carousel height-md owl-inner-nav owl-ui-lg">
-
-      <div class="item" style="background-image: url(assets/images/art/home01.jpg);">
+      @foreach ($events as $event)
+      <div class="item" style="background-image: url(assets/images/1.jpg);">
         <div class="container">
           <div class="caption vertical-center text-right">
 
-            <h1 class="fadeInLeft-1 light-color">Jiu-Jitsu Akademie Humbeek</h1>
-            <p class="fadeInLeft-2 light-color">Jiu-Jitu Akademie Humbeek biedt onderwijs, training en de mogelijkheid tot het deelnemen aan wedstrijden in Jiu-Jitsu. Deze budovorm kan bij de vereniging worden beoefend als pedagogisch spel, als sport, als zelfverdediging en als beweging culturele activiteit.</p>
+            <h1 class="fadeInLeft-1 light-color">{{ $event->eventName }}</h1>
+            <div class="light-color">
+                <p class="fadeInLeft-2">{!! $event->content !!}</p>
+            </div>
             <div class="fadeInLeft-3">
-              <a href="#" class="btn btn-large">Welkom!</a>
+              <a href="{{ url('/kalender') }}/{{ $event->id }}" class="btn btn-large">Bekijk</a>
             </div><!-- /.fadeIn -->
 
           </div><!-- /.caption -->
         </div><!-- /.container -->
       </div><!-- /.item -->
 
-      <div class="item" style="background-image: url(assets/images/art/vrouwencursus.jpg);">
-        <div class="container">
-          <div class="caption vertical-center text-right">
-
-            <h1 class="fadeInLeft-1 light-color">Zelfverdedigings<br>cursus voor<br>vrouwen</h1>
-            <p class="fadeInLeft-2 light-color">Leer jezelf verdedigen met eenvoudige, efficiënte technieken.</p>
-            <div class="fadeInLeft-3">
-              <a href="vrouwencursus.html" class="btn btn-large">Meer info</a>
-            </div><!-- /.fadeIn -->
-
-          </div><!-- /.caption -->
-        </div><!-- /.container -->
-      </div><!-- /.item -->
+      @endforeach
 
       <div class="item" style="background-image: url(assets/images/art/home02.jpg);">
+        <div class="container">
+          <div class="caption vertical-center text-right">
+            <h1 class="fadeInLeft-1 light-color">Kalender</h1>
+            <p class="fadeInLeft-2 light-color">We hebben nog meer activiteiten. Bekijk ze nu! </p>
+        <div class="fadeInLeft-3">
+          <a href="{{ url('/kalender') }}" class="btn btn-large">Bekijk de kalender</a>
+        </div><!-- /.fadeIn -->
+      </div>
+    </div>
       </div><!-- /.item -->
 
     </div><!-- /.owl-carousel -->
@@ -106,22 +105,7 @@
 
   <!-- ============================================================= SECTION – VISIT OUR STORE ============================================================= -->
 
-  <section id="visit-our-store" class="img-bg img-bg-soft tint-bg" style="background-image: url(assets/images/art/image-background04.jpg);">
-    <div class="container inner">
 
-      <div class="row">
-        <div class="col-md-8 col-sm-9">
-          <header>
-            <h1>Zelfverdedigingscursus voor vrouwen</h1>
-            <p>Leer jezelf verdedigen met eenvoudige, efficiënte technieken.</p>
-            <p>Voor jong en oud, geen conditie vereist.</p>
-          </header>
-          <a href="vrouwencursus.html" class="btn btn-large">Meer info</a>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
-  </section>
 
   <!-- ============================================================= SECTION – VISIT OUR STORE : END ============================================================= -->
 

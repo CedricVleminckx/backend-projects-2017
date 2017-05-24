@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class EventsTableSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class EventsTableSeeder extends Seeder
             'location' => 'Sporthal Antwerpen',
             'price' => 'Gratis',
             'type' => 'Wedstrijd',
-            'when' => date('01-07-2017'),
+            'when' => Carbon::now(),
             'who' => 'false',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -28,7 +29,7 @@ class EventsTableSeeder extends Seeder
             'location' => 'Sporthal Mechelen',
             'price' => '€5',
             'type' => 'Stage',
-            'when' => date('05-08-2017'),
+            'when' => Carbon::now(),
             'who' => 'true',
             'created_at' => date('d-m-Y H:i:s'),
             'updated_at' => date('d-m-Y H:i:s')

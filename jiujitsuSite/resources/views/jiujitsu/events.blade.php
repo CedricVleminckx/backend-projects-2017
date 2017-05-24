@@ -4,7 +4,7 @@
 @section('title', 'Jiujitsu')
 
 @section('content')
-
+  
 <main>
 
 @foreach($events as $event)

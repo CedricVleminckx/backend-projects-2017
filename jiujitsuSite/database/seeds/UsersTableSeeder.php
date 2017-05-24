@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'cedric.vleminckx@student.odisee.be',
             'leeftijd' => '20',
             'password' => bcrypt('Azerty123'),
+            'member' => 'true',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
             'lastname' => 'Geuzens',
             'email' => 'timo.geuzens@hotmail.com',
             'leeftijd' => '20',
+            'member' => 'false',
             'password' => bcrypt('Azerty123'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')

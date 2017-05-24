@@ -9,9 +9,6 @@
     <div class="container inner-right">
       <div class="row">
         <div class="col-md-10">
-          <form class="add" action="{{url('/bewerken/add')}}">
-            <button type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-plus"></i>Evenement</button>
-          </form>
           <table class="table">
             <thead>
               <tr>
@@ -21,17 +18,19 @@
                 <th>achternaam</th>
                 <th>email</th>
                 <th>leeftijd</th>
+                <th>member</th>
               </tr>
             </thead>
             @foreach($subs as $sub)
             <tbody>
               <tr>
                 <td>{{ $sub->events_id }}</td>
-                <td>{{ $sub->eventName}}</td>
+                <td><a href="{{ url('/kalender/')}}/{{ $sub->events_id}}">{{ $sub->eventName}}</a></td>
                 <td>{{ $sub->name }}</td>
                 <td>{{ $sub->lastname }}</td>
                 <td>{{ $sub->email }}</td>
                 <td>{{ $sub->leeftijd }}</td>
+                <td>{{ $sub->member }}</td>
               </tr>
             </tbody>
             @endforeach

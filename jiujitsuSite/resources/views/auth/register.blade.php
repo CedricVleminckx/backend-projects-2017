@@ -66,6 +66,14 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('leeftijd') ? ' has-error' : '' }}">
+                            <label for="leeftijd" class="col-md-4 control-label">Ben je lid van de club?</label>
+                            <div class="col-md-6">
+                            {!! Form::hidden('member', false) !!}
+                            {!! Form::checkbox('member', 'true') !!}
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Paswoord</label>
 

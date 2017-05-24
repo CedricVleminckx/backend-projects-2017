@@ -15,9 +15,7 @@ Route::get('/', function(){
   return Redirect::to('/home');
 });
 
-Route::get('/home', function(){
-  return view('jiujitsu.home');
-});
+Route::get('/home', 'EventController@homePage');
 
 Route::get('/home/geschiedenis', function(){
   return view('jiujitsu.history');
