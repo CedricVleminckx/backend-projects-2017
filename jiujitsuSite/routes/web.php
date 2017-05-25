@@ -37,6 +37,11 @@ Route::get('/bewerken/edit/{id}', 'AdminController@edit');
 Route::post('/bewerken/post/{id}', 'AdminController@update');
 Route::post('/bewerken/delete', 'AdminController@delete');
 
+Route::get('/fotos', 'FotosController@overview');
+Route::post('/fotos/upload', 'FotosController@upload');
+
+
+
 Route::get('/login', 'AdminController@index');
 
 Auth::routes();

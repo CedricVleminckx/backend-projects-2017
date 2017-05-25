@@ -102,7 +102,7 @@
               </li><!-- /.dropdown -->
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foto's</a>
+                <a href="{{ url('/fotos') }}" class="dropdown-toggle" data-toggle="dropdown">Foto's</a>
               </li><!-- /.dropdown -->
 
 
