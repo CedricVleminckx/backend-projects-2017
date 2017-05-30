@@ -20,16 +20,19 @@ Maak in de folder database, een nieuwe database aan genaamd jiujitsu.sqlite .
 # 4. Migrate en seed de database
 Ga terug in het mapje van de root van de site.
 Open een command prompt en typ de volgende commandos
-'''
+```
 php artisan migrate
-'''
+```
 en
-'''
+```
 php artisan db:seed
-'''
+```
 
 # 5. Generate new key
 Dit heb je nodig om het geheel te laten werken!
-'''
+```
 php artisan key:generate
-'''
+```
+
+# 6. Surf naar de site
+Surf in je browser naar localhost/path naar de site
