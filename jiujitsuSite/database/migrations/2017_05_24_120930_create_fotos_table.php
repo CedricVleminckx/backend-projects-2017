@@ -28,5 +28,6 @@ class CreateFotosTable extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('fotos');
     }
 }

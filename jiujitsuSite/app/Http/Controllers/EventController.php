@@ -13,7 +13,7 @@ class EventController extends Controller
 {
   public function overview()
   {
-      $events = Events::orderBy('when', 'ASC')->get();
+      $events = Events::orderBy('when', 'ASC')->Paginate(5);
       return view('jiujitsu.events', ['events' => $events]);
   }
 

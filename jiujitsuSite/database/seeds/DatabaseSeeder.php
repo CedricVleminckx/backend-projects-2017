@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EventsTableSeeder::class);
         $this->call(SubscriptionsTableSeeder::class); // foreign key depends on users
         $this->call(UsersTableSeeder::class); // foreign key depends on blogposts
+        $this->call(FotoSeeder::class);
     }
 }

@@ -180,27 +180,28 @@
 
         <div class="row thumbs gap-xs">
 
+
           <div class="col-xs-6 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="assets/images/art/recent01.jpg" alt=""></a>
+              <a href="{{ url('/fotos/1') }}"><img src="assets/images/art/recent01.jpg" alt=""></a>
             </figure>
           </div><!-- /.thumb -->
 
           <div class="col-xs-6 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="assets/images/art/recent02.jpg" alt=""></a>
+              <a href="{{ url('/fotos/2') }}"><img src="assets/images/art/recent02.jpg" alt=""></a>
             </figure>
           </div><!-- /.thumb -->
 
           <div class="col-xs-6 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="assets/images/art/recent03.jpg" alt=""></a>
+              <a href="{{ url('/fotos/3') }}"><img src="assets/images/art/recent03.jpg" alt=""></a>
             </figure>
           </div><!-- /.thumb -->
 
           <div class="col-xs-6 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="assets/images/art/recent04.jpg" alt=""></a>
+              <a href="{{ url('/fotos/4') }}"><img src="assets/images/art/recent04.jpg" alt=""></a>
             </figure>
           </div><!-- /.thumb -->
 

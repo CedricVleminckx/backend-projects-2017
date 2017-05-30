@@ -38,7 +38,8 @@ Route::post('/bewerken/post/{id}', 'AdminController@update');
 Route::post('/bewerken/delete', 'AdminController@delete');
 
 Route::get('/fotos', 'FotosController@overview');
-Route::post('/fotos/upload', 'FotosController@upload');
+Route::get('/fotos/{id}', 'FotosController@foto');
+Route::post('/uploadFotos', 'FotosController@upload');
 
 
 

@@ -9,9 +9,10 @@ use Illuminate\Support\Facades\Storage;
 class FotosController extends Controller
 {
     //
+
     public function overview()
     {
-      $fotos = Fotos::all();
+      $fotos = Fotos::Paginate(12);
       return view('jiujitsu.fotos', ['fotos' => $fotos]);
     }
 
@@ -35,6 +36,12 @@ class FotosController extends Controller
         }
 
       return Redirect('fotos');
+    }
+
+    public function foto($id)
+    {
+      $foto = Fotos::findorfail($id)->foto;
+      return view('jiujitsu.foto', ['foto' => $foto]);
     }
 
 }

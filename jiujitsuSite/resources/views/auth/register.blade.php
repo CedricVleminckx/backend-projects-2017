@@ -69,8 +69,10 @@
                         <div class="form-group{{ $errors->has('leeftijd') ? ' has-error' : '' }}">
                             <label for="leeftijd" class="col-md-4 control-label">Ben je lid van de club?</label>
                             <div class="col-md-6">
-                            {!! Form::hidden('member', false) !!}
-                            {!! Form::checkbox('member', 'true') !!}
+                            {!! Form::label('Ja')!!}
+                            {!! Form::radio('member', 'true') !!}<br>
+                            {!! Form::label('Nee')!!}
+                            {!! Form::radio('member', 'false') !!}
                             </div>
                         </div>
 

@@ -4,7 +4,7 @@
 @section('title', 'Jiujitsu')
 
 @section('content')
-  
+
 <main>
 
 @foreach($events as $event)
@@ -12,23 +12,13 @@
     <div class="container inner-right">
       <div class="row">
 
-        <div class="col-md-10">
-          @if(Auth::guest())
-            @if($event->who == 'true')
-              <header>
-                <a href="{{ url('/kalender') }}/{{$event->id}}"><h1>{{$event->eventName}}</h1></a>
-                <p>{!! $event->content !!}</p>
-              </header>
-              <a href="{{ url('/kalender') }}/{{$event->id}}" class="btn btn-large">Meer info</a>
-            @endif
-          @endif
-          @if(Auth::user())
-              <header>
-                <a href="{{ url('/kalender') }}/{{$event->id}}"><h1>{{$event->eventName}}</h1></a>
-                <p>{!! $event->content !!}</p>
-              </header>
-              <a href="{{ url('/kalender') }}/{{$event->id}}" class="btn btn-large">Meer info</a>
-          @endif
+      <div class="col-md-10">
+        <header>
+          <a href="{{ url('/kalender') }}/{{$event->id}}"><h1>{{$event->eventName}}</h1></a>
+          <p>{!! $event->content !!}</p>
+        </header>
+        <a href="{{ url('/kalender') }}/{{$event->id}}" class="btn btn-large">Meer info</a>
+
         </div><!-- /.col -->
       </div><!-- /.row -->
 
@@ -36,6 +26,14 @@
   </section>
 @endforeach
 
+
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-10 text-center">
+        {{ $events->links() }}
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
 </main>
 
 @endsection

@@ -12,5 +12,17 @@ class FotoSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('fotos')->insert([
+            'foto' => '/storage/recent01.jpg',
+        ]);
+        DB::table('fotos')->insert([
+            'foto' => '/storage/recent02.jpg',
+        ]);
+        DB::table('fotos')->insert([
+            'foto' => '/storage/recent03.jpg',
+        ]);
+        DB::table('fotos')->insert([
+            'foto' => '/storage/recent04.jpg',
+        ]);
     }
 }
