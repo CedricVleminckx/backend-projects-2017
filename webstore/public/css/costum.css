@@ -1,0 +1,19 @@
+.public{
+  float: left;
+  max-width: 160px;
+  min-height: 50px;
+  margin-left: 25px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.public a:link{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+
+th {
+    text-align: left;
+}

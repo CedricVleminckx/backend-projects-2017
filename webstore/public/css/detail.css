@@ -1,0 +1,11 @@
+img{
+  float: left;
+  height: 500px;
+  width: 320px;
+  margin-right: 20px;
+}
+
+.w3-container  a{
+  text-decoration: none;
+  color: black;
+}
