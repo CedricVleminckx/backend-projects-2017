@@ -12,7 +12,6 @@ use App\fotos;
 
 class ShopController extends Controller
 {
-    //
     public function index()
     {
       $category = Category::all();
@@ -98,6 +97,4 @@ class ShopController extends Controller
                           ->get();
       return view('shop.filter', ['items' => $items], ['category' => $category]);
     }
-
-
 }

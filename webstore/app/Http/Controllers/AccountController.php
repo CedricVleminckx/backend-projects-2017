@@ -12,7 +12,6 @@ use App\products;
 
 class AccountController extends Controller
 {
-    //
     public function __construct()
     {
         $this->middleware('auth');
@@ -107,7 +106,6 @@ class AccountController extends Controller
         ->where([ ['status', '=', 'true'], ['orders.users_id', '=', Auth::id()],])
         ->get();
         return view('cart.orderd', ['orders'=>$orders]);
-        //return redirect('/shop/'.$id);
     }
 
     public function wishItem($id, Request $request)
@@ -125,7 +123,6 @@ class AccountController extends Controller
         $ord->save();
 
         return redirect('/shop');
-        //return redirect('/shop/'.$id);
     }
 
     public function wishlist()
@@ -137,7 +134,6 @@ class AccountController extends Controller
       ->where([ ['status', '=', 'false'], ['orders.users_id', '=', Auth::id()],])
       ->get();
       return view('cart.shoppinCart', ['wishes'=>$wishes], ['user' => $user]);
-        //return redirect('/shop/'.$id);
     }
 
     public function deleteWish($id)
@@ -150,6 +146,5 @@ class AccountController extends Controller
       ->where([ ['status', '=', 'false'], ['orders.users_id', '=', Auth::id()],])
       ->get();
       return view('cart.shoppinCart', ['wishes'=>$wishes]);
-        //return redirect('/shop/'.$id);
     }
 }
