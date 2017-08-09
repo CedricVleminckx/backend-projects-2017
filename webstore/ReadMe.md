@@ -15,7 +15,7 @@ composer install
 Dit zal alle nodige extensies downloaden en installeren.
 
 # 3. Maak een database
-Maak in de folder database, een nieuwe database aan genaamd jiujitsu.sqlite .
+Maak in de folder database, een nieuwe database aan genaamd webstore.sqlite .
 
 # 4. Migrate en seed de database
 Ga terug in het mapje van de root van de site.
